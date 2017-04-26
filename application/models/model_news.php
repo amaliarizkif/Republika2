@@ -35,6 +35,16 @@ Class Model_news extends CI_Model {
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
+
+	function get_selectednews($id_news){
+		$this->db
+			->select('id_news, title, content, images, nm_category')
+			->from('news')
+			->where('news.id_news', $id_news)	
+			->join('category', 'category.id_category = news.category');
+			$query = $this->db->get();
+			return $query;
+	}
 }
 
 ?>

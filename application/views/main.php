@@ -26,8 +26,8 @@
                                 <p class="author-category">By <a href="#">John Slim</a> in <a href="">Fashion and style</a>
                                 </p>
                                 <hr>
-                                <p class="intro"><?php echo $u->content; ?></p>
-                                <p class="read-more"><a href="post.html" class="btn btn-primary">Continue reading</a>
+                                <p class="intro"><?php echo substr($u->content, 0, 200) ; ?></p>
+                                <p class="read-more"><a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Continue reading</a>
                                 </p>
                             </div>
                         </div>
