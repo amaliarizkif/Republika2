@@ -22,8 +22,8 @@
                                 <p class="intro"><?php echo substr($u->content, 0, 200) ; ?></p>
                                 <p class="read-more"><a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Continue reading</a>
 
-                                    <a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Delete</a>
-                                    <a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Edit</a>
+                                    <a href="<?php echo base_url('news/delete/'.$u->id_news); ?>" class="btn btn-primary">Delete</a>
+                                    <a href="<?php echo base_url('news/edit/'.$u->id_news); ?>" class="btn btn-primary">Edit</a>
                                 </p>
                             </div>
                         </div>

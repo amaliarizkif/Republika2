@@ -100,38 +100,8 @@
 
     <div class="navbar navbar-default yamm" role="navigation" id="navbar">
         <div class="container">
-            <div class="navbar-header">
-
-                <!-- <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
-                </a> -->
-                <div class="navbar-buttons">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-align-justify"></i>
-                    </button>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
-                        <span class="sr-only">Toggle search</span>
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-            <!--/.navbar-header -->
-            <!--/.nav-collapse -->
-
             <div class="navbar-buttons">
-
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-btn">
-
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-
-            </span>
-                    </div>
-                </form>
+                <center><h1>News</h1></center>
             </div>
 
         </div>

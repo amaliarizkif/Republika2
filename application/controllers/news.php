@@ -56,7 +56,7 @@ class News extends CI_Controller {
 	{
 		$where = array('id_news' => $id_news );
 		$this->model_news->delete($where,'news');
-		redirect('news');
+		redirect('home');
 	}
 
 	public function edit($id_news){
