@@ -48,9 +48,9 @@
         <div class="container">
             <div class="col-md-12" data-animate="fadeInDown">
                 <ul class="menu">
-                    <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                    <li><a href="<?php echo  base_url()?>home/login">Login</a>
                     </li>
-                    <li><a href="register.html">Register</a>
+                    <li><a href="<?php echo  base_url()?>home/register">Register</a>
                     </li>
                 </ul>
             </div>
