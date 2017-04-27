@@ -12,7 +12,9 @@ class News extends CI_Controller {
 	public function add_news()
 	{
 		$data['category'] = $this->model_news->get_category()->result();
-		$this->load->view('add_news', $data);
+		$this->load->view('header');
+		$this->load->view('add_news2', $data);
+		$this->load->view('footer');
 	}
 
 	public function insert_news()
@@ -46,7 +48,7 @@ class News extends CI_Controller {
 		$this->model_news->add_news($data);
 		$msg['message'] = 'Data Inserted Successfully';
 		$this->load->view('add_news', $msg);
-		redirect('news');
+		redirect('home');
 	}
 
 	public function delete($id_news)

@@ -1,18 +1,11 @@
 <div id="content">
-            <div id="hot">
-
-                <div class="box">
-                    <div class="container">
-                        <div class="col-md-12">
-                            <h2>Hot this week</h2>
-                        </div>
-                    </div>
-                </div>                     
-
-            </div>
-            <!-- /#hot -->
-
             <div class="container">
+                <div class="col-sm-12">
+
+                    <ul class="breadcrumb">
+                            <a href="<?php echo base_url();?>news/add_news"><CENTER><h4>Add News</h4></CENTER></a>
+                    </ul>
+                </div>
 
                 <div class="col-md-12" data-animate="fadeInUp">
 
@@ -23,7 +16,7 @@
                         <div class="col-sm-6">
                             <div class="post">
                                 <h4><a href=""><?php echo $u->title; ?></a></h4>
-                                <p class="author-category">By <a href="#">John Slim</a> in <a href="">Fashion and style</a>
+                                <p class="author-category">By <?php echo $u->name; ?> in <?php echo $u->nm_category; ?>
                                 </p>
                                 <hr>
                                 <p class="intro"><?php echo substr($u->content, 0, 200) ; ?></p>

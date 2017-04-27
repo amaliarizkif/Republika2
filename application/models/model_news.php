@@ -1,3 +1,4 @@
+
 <?php
 
 Class Model_news extends CI_Model {
@@ -9,9 +10,10 @@ Class Model_news extends CI_Model {
 
 	public function get_news(){
 		$news = $this->db
-		->select('id_news, title, content, images, nm_category')
+		->select('id_news, title, content, images, nm_category, name, category')
 		->from('news')
-		->join('category', 'category.id_category = news.category');
+		->join('category', 'category.id_category = news.category')
+		->join('user', 'user.id_user = news.id_user');
 		$news = $this->db->get();
 		return $news;
 	}
@@ -38,10 +40,11 @@ Class Model_news extends CI_Model {
 
 	function get_selectednews($id_news){
 		$this->db
-			->select('id_news, title, content, images, nm_category')
+			->select('id_news, title, content, images, nm_category, name, date')
 			->from('news')
 			->where('news.id_news', $id_news)	
-			->join('category', 'category.id_category = news.category');
+			->join('category', 'category.id_category = news.category')
+			->join('user', 'user.id_user = news.id_user');
 			$query = $this->db->get();
 			return $query;
 	}

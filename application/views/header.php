@@ -40,18 +40,24 @@
 
 </head>
 
-<body>
 
-    <!-- *** TOPBAR ***
- _________________________________________________________ -->
+<body>
     <div id="top">
         <div class="container">
             <div class="col-md-12" data-animate="fadeInDown">
                 <ul class="menu">
+                <?php if($this->session->userdata('login') == TRUE){ 
+                    $name = $this->session->userdata('name');
+                ?>
+                <li>Hai, <?php echo $name; ?></li>
+                <li><a href="<?php echo  base_url()?>login/logout">Logout</a>
+                </li>
+                <?php }  else { ?>
                     <li><a href="<?php echo  base_url()?>home/login">Login</a>
                     </li>
                     <li><a href="<?php echo  base_url()?>home/register">Register</a>
                     </li>
+                <?php } ?>
                 </ul>
             </div>
         </div>
@@ -88,11 +94,6 @@
 
     </div>
 
-    <!-- *** TOP BAR END *** -->
-
-    <!-- *** NAVBAR ***
- _________________________________________________________ -->
-
     <div class="navbar navbar-default yamm" role="navigation" id="navbar">
         <div class="container">
             <div class="navbar-header">
@@ -127,7 +128,6 @@
             </span>
                     </div>
                 </form>
-
             </div>
 
         </div>

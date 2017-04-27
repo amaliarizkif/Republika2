@@ -9,7 +9,7 @@
                     <div class="box">
 
                         <h1><?php echo $s['title']; ?></h1>
-                        <p class="author-date">By <a href="#">John Slim</a> | June 20, 2013</p>
+                        <p class="author-date">By <?php echo $s['name'];?> | <?php echo $s['date'];?></p>
                         <div id="post-content">
                         <center>
                             <img src="<?php echo base_url(); ?>uploads/<?= $s['images']; ?>" class="img-responsive" alt="Example blog post alt">
@@ -24,3 +24,4 @@
                 </div>
             </div>
 <?php } ?>
+
