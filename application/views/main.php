@@ -15,7 +15,7 @@
                     <div id="blog-homepage">
                         <div class="col-sm-6">
                             <div class="post">
-                                <h4><a href=""><?php echo $u->title; ?></a></h4>
+                                <h4><a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>"><?php echo $u->title; ?></a></h4>
                                 <p class="author-category">By <?php echo $u->name; ?> in <?php echo $u->nm_category; ?>
                                 </p>
                                 <hr>

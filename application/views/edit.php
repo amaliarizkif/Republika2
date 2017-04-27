@@ -19,12 +19,17 @@
                                 <textarea name="content" placeholder="Content" width="300px" height="200"><?php echo $u->content; ?></textarea>
                             </div>
                             <div class="form-group">
+                                <label for="name">Category</label>
+                                <input type="text" class="form-control" placeholder="Title" id="category" name="category" value="<?php echo $u->category; ?>">
+                            </div>
+                            <div class="form-group">
                                 <label for="name">Images</label>
-                                <input type="file" name="userfile" class=>
+                                <input type="file" name="userfile" >
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i>Update</button>
                             </div>
+                            <?php } ?>
                         </form>
                     </div>
                 </div>
