@@ -3,22 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class News extends CI_Controller {
 
-	public function index()
-	{
-		$data['news'] = $this->model_news->get_news()->result();
-		$this->load->view('news', $data);
-	}
+	// public function index()
+	// {
+	// 	$data['news'] = $this->model_news->get_news()->result();
+	// 	$this->load->view('news', $data);
+	// }
 
 	public function add_news()
 	{
 		$data['category'] = $this->model_news->get_category()->result();
 		$this->load->view('header');
-		$this->load->view('add_news2', $data);
+		$this->load->view('add_news', $data);
 		$this->load->view('footer');
 	}
 
-	public function insert_news()
-	{
+	public function insert_news(){
 		$config = array(
 			'upload_path' => './uploads/',
 			'allowed_types' => "gif|jpg|png|jpeg",
@@ -35,14 +34,16 @@ class News extends CI_Controller {
 			$error = array('error' => $this->upload->display_errors());
 			$this->load->view('file_view', $error);
 			}
-
 		$upload_data = $this->upload->data();
-
+		date_default_timezone_set('Asia/Jakarta');
+		$date = date('Y-m-d H:i:s');
 		$data = array(
 			'title' => $this->input->post('title'),
 			'content' => $this->input->post('content'),
 			'category' => $this->input->post('category'),
-			'images' => $upload_data['file_name']
+			'images' => $upload_data['file_name'],
+			'date' => $date,
+			'id_user' => $this->session->userdata('id_user')
 		);
 
 		$this->model_news->add_news($data);

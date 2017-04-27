@@ -26,7 +26,7 @@
         <div id="copyright">
             <div class="container">
                 <div class="col-md-6">
-                    <p class="pull-left">© 2015 Your name goes here.</p>
+                    <p class="pull-left">© 2015.</p>
 
                 </div>
                 <div class="col-md-6">
@@ -56,10 +56,6 @@
     <script src="<?php echo base_url(); ?>asset/js/bootstrap-hover-dropdown.js"></script>
     <script src="<?php echo base_url(); ?>asset/js/owl.carousel.min.js"></script>
     <script src="<?php echo base_url(); ?>asset/js/front.js"></script>
-
-
-
-
 
 
 </body>

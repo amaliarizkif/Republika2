@@ -1,40 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Add News</title>
-</head>
-<body>
-	<h1>Tambah Berita</h1>
-	<form action="<?= base_url('news/insert_news')?>" method="post" enctype="multipart/form-data">
-		<table>
-			<tr> 
-				<td><label>Title</label></td> <td>:</td> 
-				<td><input type="text" name="title" id="title" placeholder="Title"/></td>
-			</tr>
-			<tr> 
-				<td><label>Content</label></td> <td>:</td> 
-				<td><textarea name="content" placeholder="Content"></textarea></td>
-			</tr>
-			<tr> 
-				<td><label>Category</label></td> <td>:</td> 
-				<td>
-					
-					<select name='category' id='category' >
-					<option value=''>Pilih kategori</option>";
-					<?php
-					foreach ($category as $u) {
-					?>
-					<option value="<?php echo $u->id_category; ?>"> <?php echo $u->nm_category; ?> </option>
-					<?php } ?>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td><label>Images</label></td> <td>:</td>
-				<td><input type="file" name="userfile"></td>
-			</tr>
-		</table>
-		<input type="submit" name="submit" value="Add"/>
-	</form>
-</body>
-</html>
+ <div id="all">
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <div class="box">
+                        <h1>Add News</h1>
+
+                        <form action="<?=base_url('news/insert_news')?>" method="post">
+                            <div class="form-group">
+                                <label for="name">Title</label>
+                                <input type="text" class="form-control" placeholder="Title" id="title" name="title">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Content</label>
+                                <textarea name="content" placeholder="Content" width="300px" height="200"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Category</label>
+                                <select name='category' id='category' >
+                                     <option value=''>Pilih kategori</option>";
+                                     <?php
+                                        foreach ($category as $u) {
+                                     ?>
+                                     <option value="<?php echo $u->id_category; ?>"> <?php echo $u->nm_category; ?> </option>
+                                     <?php } ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Images</label>
+                                <input type="file" name="userfile" class=>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i>Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->

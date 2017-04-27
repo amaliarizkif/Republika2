@@ -10,7 +10,7 @@
                         <form action="<?=base_url('news/insert_news')?>" method="post">
                             <div class="form-group">
                                 <label for="name">Title</label>
-                                <input type="text" class="form-control" placeholder="Title" id="name" name="name">
+                                <input type="text" class="form-control" placeholder="Title" id="title" name="title">
                             </div>
                             <div class="form-group">
                                 <label for="name">Content</label>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Images</label>
-                                <input type="file" class="form-control" id="name" name="userfile">
+                                <input type="file" name="userfile">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i>Add</button>

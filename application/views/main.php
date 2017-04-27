@@ -8,11 +8,11 @@
                 </div>
 
                 <div class="col-md-12" data-animate="fadeInUp">
+                 <?php 
+                    foreach ($news as $u) {
+                ?>
 
-                    <div id="blog-homepage" class="row">
-                        <?php 
-                            foreach ($news as $u) {
-                        ?>
+                    <div id="blog-homepage">
                         <div class="col-sm-6">
                             <div class="post">
                                 <h4><a href=""><?php echo $u->title; ?></a></h4>
@@ -21,11 +21,14 @@
                                 <hr>
                                 <p class="intro"><?php echo substr($u->content, 0, 200) ; ?></p>
                                 <p class="read-more"><a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Continue reading</a>
+
+                                    <a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Delete</a>
+                                    <a href="<?php echo base_url(); ?>home/news_select/<?= $u->id_news; ?>" class="btn btn-primary">Edit</a>
                                 </p>
                             </div>
                         </div>
-                        <?php } ?>
                     </div>
+                <?php } ?>
                 </div>
             </div>
             <!-- /.container -->

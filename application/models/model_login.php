@@ -7,12 +7,9 @@ Class Model_login extends CI_Model {
 			return $query;
 		}
 
-		public function get_user($email, $password){
-			$query = $this->db->get_where('user', 
-				array(
-					'email' => $email,
-					'password' => md5($password)
-					));
+		public function get_user($table, $where)
+		{
+			return $this->db->get_where($table,$where);
 			return $query;
 		}
 	

@@ -4,10 +4,16 @@
 		public function check_login(){
 			$email = $this->input->post('email');
 			$password = $this->input->post('password');
-			$num = $this->model_login->get_user($email, $password)->num_rows();
-			$user = $this->model_login->get_user($email, $password)->result();
 
-			if ($num == 1) {
+			$where = array(
+			'email' => $email,
+			'password' => $password
+			);
+
+			$num =  $this->model_login->get_user('user', $where)->num_rows();
+			$user =  $this->model_login->get_user('user', $where)->result();
+
+			if ($num > 0) {
 				$sess = array(
 					'name' => $user[0]->name,
 					'login' => TRUE,
@@ -17,7 +23,7 @@
 				redirect('home');
 			}
 			else{
-				redirect(base_url());
+				redirect('home/login');
 			}
 		}
 
